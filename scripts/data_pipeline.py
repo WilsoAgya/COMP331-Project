@@ -111,10 +111,3 @@ aapl_clean = clean_df[clean_df['body'].str.contains('AAPL', na=False, case=False
 
 aapl_clean.to_csv('AAPL_Cleaned_Sentiment.csv', index=False)
 print(f"Cleaned Apple dataset created with {len(aapl_clean)} rows.")
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-import shutil
-shutil.move('AAPL_Cleaned_Sentiment.csv', '/content/drive/My Drive/AAPL_Cleaned_Sentiment.csv')
-print("File saved to your Google Drive!")
